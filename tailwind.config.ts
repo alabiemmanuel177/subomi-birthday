@@ -49,8 +49,8 @@ const config: Config = {
           "100%": { backgroundPosition: "1000px 0" },
         },
         twinkle: {
-          "0%, 100%": { opacity: 0.6, filter: "drop-shadow(0 0 2px rgba(255,255,255,0.6))" },
-          "50%": { opacity: 1, filter: "drop-shadow(0 0 6px rgba(255,255,255,1))" },
+          "0%, 100%": { opacity: "0.6", filter: "drop-shadow(0 0 2px rgba(255,255,255,0.6))" },
+          "50%": { opacity: "1", filter: "drop-shadow(0 0 6px rgba(255,255,255,1))" },
         },
       },
     },
