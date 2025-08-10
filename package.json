@@ -1,0 +1,32 @@
+{
+  "name": "subie-denim-diamonds",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "5.16.2",
+    "clsx": "2.1.1",
+    "next": "^15.4.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.5.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.41",
+    "prisma": "5.16.2",
+    "tailwindcss": "3.4.10",
+    "typescript": "^5.9.2"
+  }
+}
