@@ -68,7 +68,7 @@ export default function Hero() {
           {/* header line */}
           <div className="mx-auto mb-6 inline-flex items-center gap-3 text-silver-200/90 relative">
             <span className="h-px w-16 bg-silver-500/50" />
-            <span className="tracking-[0.32em] text-xs sm:text-sm uppercase">Denim • Diamonds • Silver</span>
+            <span className="tracking-[0.32em] text-xs sm:text-sm uppercase">Denim • Diamonds</span>
             <span className="h-px w-16 bg-silver-500/50" />
           </div>
 
@@ -96,7 +96,7 @@ export default function Hero() {
 
           <div className="mt-12 flex items-center justify-center gap-3 text-silver-300/85 text-sm sm:text-base">
             <span className="h-px w-10 bg-silver-500/40" />
-            <span>Dress code: Blue Denim • Diamonds • Silver</span>
+            <span>Dress code: Blue Denim • Diamonds</span>
             <span className="h-px w-10 bg-silver-500/40" />
           </div>
         </div>

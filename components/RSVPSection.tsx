@@ -33,7 +33,7 @@ export default function RSVPSection() {
         {/* Bottom diamond divider */}
         <div className="relative mx-auto mt-10 flex items-center justify-center gap-3 text-silver-200/90">
           <span className="h-px w-16 bg-silver-500/50" />
-          <span className="text-sm sm:text-base">Denim • Diamonds • Silver</span>
+          <span className="text-sm sm:text-base">Denim • Diamonds</span>
           <span className="h-px w-16 bg-silver-500/50" />
         </div>
       </div>
