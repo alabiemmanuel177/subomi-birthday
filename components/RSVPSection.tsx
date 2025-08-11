@@ -28,6 +28,12 @@ export default function RSVPSection() {
 
         <h2 id="rsvp-heading" className="sr-only">RSVP</h2>
 
+        <div className="text-center mb-8">
+          <p className="text-silver-200/90 text-lg sm:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed">
+            We can't wait to celebrate you! This invite is just for you, so please RSVP to reserve your spot. And yes, Rice and stew is very plenty
+          </p>
+        </div>
+
         <RSVPForm />
 
         {/* Bottom diamond divider */}

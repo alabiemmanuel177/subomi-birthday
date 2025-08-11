@@ -36,8 +36,8 @@ export default function EventDetails() {
                 Date & Time
               </p>
               <p className="text-silver-100 text-lg sm:text-xl leading-relaxed">
-                <span className="font-semibold">Saturday, 23rd August</span><br />
-                5:00 PM arrivals • 6:00 PM start
+                <span className="font-semibold">Saturday, 30th August</span><br />
+                12pm prompt
               </p>
             </div>
   
@@ -47,7 +47,7 @@ export default function EventDetails() {
                 Venue
               </p>
               <p className="text-silver-100 text-lg sm:text-xl leading-relaxed">
-                Shared privately after RSVP to keep the celebration intimate.
+                To be disclosed in due time
               </p>
             </div>
   
@@ -57,7 +57,7 @@ export default function EventDetails() {
                 Dress Code
               </p>
               <p className="text-silver-100 text-lg sm:text-xl leading-relaxed">
-                Blue denim base with silver accents — rhinestones, crystals, tasteful sparkle ✨
+                Blue denim base with tasteful sparkle, silver accessories, and blue, white & black accents ✨
               </p>
             </div>
           </div>

@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
 
-const TOTAL = 21;
+const TOTAL = 20;
 
 export default function TimelineCarousel() {
   const items = useMemo(
@@ -158,7 +158,7 @@ export default function TimelineCarousel() {
               aria-label={`Open Age ${y} photo`}
             >
               <img
-                src={`/images/timeline/Year ${y}.png`}
+                src={`/images/timeline/Year ${y}${y === 5 || y === 8 ? '.jpg' : '.png'}`}
                 alt={`Age ${y}`}
                 className="w-full aspect-[3/4] object-cover bg-denim-700 transition group-hover:scale-[1.02]"
                 onError={(e) => {
@@ -214,7 +214,7 @@ export default function TimelineCarousel() {
             ‹
           </button>
           <img
-            src={`/images/timeline/Year ${index + 1}.png`}
+            src={`/images/timeline/Year ${index + 1}${(index + 1) === 5 || (index + 1) === 8 ? '.jpg' : '.png'}`}
             alt={`Age ${index + 1} (full view)`}
             className="max-h-[85vh] max-w-[92vw] object-contain rounded-xl shadow-diamond"
             onError={(e) => {

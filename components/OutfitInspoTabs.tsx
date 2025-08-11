@@ -84,7 +84,7 @@ export default function OutfitInspoTabs() {
                 "relative rounded-xl px-4 py-2 text-sm sm:text-base transition",
                 "border border-silver-400/30 bg-denim-900/40 backdrop-blur",
                 active
-                  ? "text-denim-950 bg-silver-100 shadow-diamond font-semibold"
+                  ? "text-black bg-silver-100 shadow-diamond font-semibold"
                   : "text-silver-100 hover:brightness-110"
               )}
             >
@@ -110,9 +110,6 @@ export default function OutfitInspoTabs() {
                 (e.target as HTMLImageElement).src = `/placeholders/placeholder_${(i % 4) + 1}.svg`;
               }}
             />
-            <figcaption className="p-4 text-sm text-center text-silver-100/90 font-medium">
-              {it.title}
-            </figcaption>
           </figure>
         ))}
         {!list.length && (

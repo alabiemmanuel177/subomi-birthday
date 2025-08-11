@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 export default function RSVPForm() {
-  const [state, setState] = useState<{ ok: boolean; message: string } | null>(null);
   const [loading, setLoading] = useState(false);
+  const [state, setState] = useState<{ ok: boolean; message: string } | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -29,7 +29,7 @@ export default function RSVPForm() {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error || "Something went wrong");
-      setState({ ok: true, message: "Thank you! We can’t wait to celebrate with you." });
+      setState({ ok: true, message: "You're warmly invited to a radiant afternoon of sparkle and love" });
       form.reset();
     } catch (err: any) {
       setState({ ok: false, message: err.message || "Failed to RSVP" });

@@ -16,7 +16,7 @@ export default function Home() {
       <OutfitInspoTabs />
 
       <footer className="section pb-10 text-center text-silver-300/80">
-        Built with 💙 for Olasubomi.
+        Built with ❤️ for Olasubomi.
       </footer>
     </main>
   );
