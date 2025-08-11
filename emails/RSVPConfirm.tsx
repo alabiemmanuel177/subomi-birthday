@@ -16,8 +16,8 @@ import {
     attending,
     gender,
     relation,
-    dateText = "Saturday, 23rd August",
-    startText = "Arrivals 5:00 PM • Start 6:00 PM",
+    dateText = "Saturday, 30th August",
+    startText = "12pm prompt",
   }: Props) {
     const title = attending
       ? "You’re in! ✨"
