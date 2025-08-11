@@ -4,12 +4,13 @@ import { useState } from "react";
 
 export default function RSVPForm() {
   const [loading, setLoading] = useState(false);
-  const [state, setState] = useState<{ ok: boolean; message: string } | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    setState(null);
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
@@ -29,10 +30,14 @@ export default function RSVPForm() {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error || "Something went wrong");
-      setState({ ok: true, message: "You're warmly invited to a radiant afternoon of sparkle and love" });
+      setModalMessage("You're warmly invited to a radiant afternoon of sparkle and love");
+      setIsSuccess(true);
+      setShowModal(true);
       form.reset();
     } catch (err: any) {
-      setState({ ok: false, message: err.message || "Failed to RSVP" });
+      setModalMessage(err.message || "Failed to RSVP");
+      setIsSuccess(false);
+      setShowModal(true);
     } finally {
       setLoading(false);
     }
@@ -103,10 +108,29 @@ export default function RSVPForm() {
         </button>
       </div>
 
-      {state && (
-        <p className={`text-base ${state.ok ? "text-green-300" : "text-red-300"}`}>
-          {state.message}
-        </p>
+      {/* Success/Error Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="card backdrop-blur-md max-w-md w-full mx-4 p-6 border-2 border-silver-300/50">
+            <div className="text-center">
+              <div className={`text-4xl mb-4 ${isSuccess ? "text-green-300" : "text-red-300"}`}>
+                {isSuccess ? "✨" : "❌"}
+              </div>
+              <h3 className={`text-xl font-semibold mb-3 ${isSuccess ? "text-green-300" : "text-red-300"}`}>
+                {isSuccess ? "RSVP Submitted!" : "Oops!"}
+              </h3>
+              <p className="text-silver-200/90 text-base leading-relaxed mb-6">
+                {modalMessage}
+              </p>
+              <button
+                onClick={() => setShowModal(false)}
+                className="btn bg-silver-600 text-silver-100 hover:bg-silver-500 px-6 py-3"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </form>
   );

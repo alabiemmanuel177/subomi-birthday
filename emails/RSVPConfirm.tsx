@@ -31,7 +31,7 @@ import {
           <Container style={styles.card}>
             <Section>
               <Heading style={styles.h1}>Subomi’s 21st</Heading>
-              <Text style={styles.tagline}>Denim • Diamonds • Silver</Text>
+              <Text style={styles.tagline}>Denim and Diamonds and Silver</Text>
             </Section>
   
             <Hr style={styles.hr} />
