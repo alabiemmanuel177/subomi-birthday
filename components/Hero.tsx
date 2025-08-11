@@ -84,7 +84,7 @@ export default function Hero() {
           <StudRow className="mt-6" count={11} />
 
           <p className="mt-7 text-silver-200/90 text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto">
-            You’re cordially invited to an elegant evening of sparkle and love.
+            You’re warmly invited to a radiant afternoon of sparkle and love
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
